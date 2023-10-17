@@ -280,11 +280,11 @@ a_predikat.append(alpha)
 rata = jml_produk[18]
 R19 = prod_agakBertambah(rata,alpha)
 himpunan_produk.append(R19)
-# [20] if suhu TINGGI, kebisingan TENANG, cahaya AGAK TERANG => JML PRODUK = 146.53 (BERTAMBAH)
+# [20] if suhu TINGGI, kebisingan TENANG, cahaya AGAK TERANG => JML PRODUK = 146.53 (AGAK BERTAMBAH)
 alpha = (min(c,d,h))
 a_predikat.append(alpha)
 rata = jml_produk[19]
-R20 = prod_bertambah(rata,alpha)
+R20 = prod_agakBertambah(rata,alpha)
 himpunan_produk.append(R20)
 # [21] if suhu TINGGI, kebisingan TENANG, cahaya TERANG => JML PRODUK = 142.17 (AGAK BERTAMBAH)
 alpha = (min(c,d,i))
@@ -351,9 +351,9 @@ elif total_a_predikat != 0:
 
     if z>=130.0 and z<141.0:
         print("produksi berkurang")
-    elif z>=141.0 and z<146.0:
+    elif z>=141.0 and z<147.0:
         print("produksi agak bertambah") 
-    elif z>=146.0 and z<155:
+    elif z>=147.0 and z<155:
         print("produksi bertambah")
 
     
