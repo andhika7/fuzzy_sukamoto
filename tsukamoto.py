@@ -338,13 +338,23 @@ z = 0
 for i in range(27):
     a_predikat_x_produk += a_predikat[i]*himpunan_produk[i]
     total_a_predikat += a_predikat[i]
-print(f"total a_pred*produk: {a_predikat_x_produk}")
-print(f"total a_predikat: {total_a_predikat}")
+# print(f"total a_pred*produk: {a_predikat_x_produk}")
+# print(f"total a_predikat: {total_a_predikat}")
 
 # ********************** CRISP OUTPUT ********************
 if total_a_predikat == 0:
     print("nilai fuzzy undefined")
-else:
+elif total_a_predikat != 0:
     z = a_predikat_x_produk / total_a_predikat
     z_2dig = "{:.2f}".format(z)
     print(f"fuzzy out: {z_2dig}")
+
+    if z>=130.0 and z<141.0:
+        print("produksi berkurang")
+    elif z>=141.0 and z<146.0:
+        print("produksi agak bertambah") 
+    elif z>=146.0 and z<155:
+        print("produksi bertambah")
+
+    
+    
